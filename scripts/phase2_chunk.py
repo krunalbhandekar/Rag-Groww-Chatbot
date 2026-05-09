@@ -48,8 +48,13 @@ def main():
             markdown_text = f.read()
             
         source_url = url_map.get(scheme_id, "unknown_url")
+        fetched_at = info.get('last_ok_fetched_at')
         
-        chunks = chunk_markdown(markdown_text, scheme_id, source_url, snapshot_id)
+        extra_meta = {}
+        if fetched_at:
+            extra_meta['fetched_at'] = fetched_at
+        
+        chunks = chunk_markdown(markdown_text, scheme_id, source_url, snapshot_id, extra_metadata=extra_meta)
         all_chunks.extend(chunks)
         print(f"[{scheme_id}] Generated {len(chunks)} chunks.")
         

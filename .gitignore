@@ -8,3 +8,12 @@
 __pycache__/
 *.py[cod]
 *.pyo
+
+
+
+
+
+.venv
+venv
+__pycache__
+*.pyc

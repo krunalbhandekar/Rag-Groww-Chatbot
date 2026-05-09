@@ -20,8 +20,20 @@ class GroqGenerator:
         self.client = Groq(api_key=api_key)
         self.model_name = model_name or os.getenv("GROQ_MODEL_NAME", "llama-3.1-8b-instant")
 
+    def _clean_text(self, text: str) -> str:
+        """
+        Fixes squashed text common in HTML-to-Markdown conversion.
+        Example: 'Expense ratio0.75%' -> 'Expense ratio 0.75%'
+        """
+        # Fix WordNumber
+        text = re.sub(r"([a-zA-Z])(\d)", r"\1 \2", text)
+        # Fix NumberWord or %Word
+        text = re.sub(r"([0-9%])([A-Z])", r"\1 \2", text)
+        # Fix excessive whitespace
+        return re.sub(r"\s+", " ", text).strip()
+
     def _clean_sentence(self, text: str) -> str:
-        cleaned = re.sub(r"\s+", " ", text).strip()
+        cleaned = self._clean_text(text)
         cleaned = cleaned.replace("EducationMr.", "Education Mr.")
         cleaned = cleaned.replace("ExperiencePrior", "Experience. Prior")
         return cleaned
@@ -75,7 +87,9 @@ class GroqGenerator:
         for chunk in context_chunks:
             source_url = chunk["metadata"].get("source_url", "")
             raw_text = chunk.get("text", "")
-            clipped_text = raw_text[:max_chars_per_chunk]
+            # Clean text to fix squashed segments like 'Expense ratio0.75%'
+            cleaned_text = self._clean_text(raw_text)
+            clipped_text = cleaned_text[:max_chars_per_chunk]
             block = f"Source: {source_url}\nContent: {clipped_text}"
             if current_total + len(block) > max_total_chars and context_lines:
                 break
@@ -118,6 +132,15 @@ class GroqGenerator:
         dates = [c['metadata'].get('source_last_updated') or c['metadata'].get('fetched_at') for c in context_chunks]
         valid_dates = [d for d in dates if d]
         last_updated = max(valid_dates) if valid_dates else "Unknown Date"
+        
+        # Format the date if it's in ISO format
+        if last_updated != "Unknown Date" and "T" in last_updated:
+            try:
+                from datetime import datetime
+                dt = datetime.fromisoformat(last_updated.replace("Z", "+00:00"))
+                last_updated = dt.strftime("%d %b %Y")
+            except Exception:
+                pass
         
         footer = f"Last updated from sources: {last_updated}"
         
