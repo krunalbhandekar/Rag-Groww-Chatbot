@@ -1,0 +1,10 @@
+# Ingestion snapshots and local state
+/data/
+
+# Environment variables — never commit secrets
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
