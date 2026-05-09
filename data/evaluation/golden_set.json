@@ -1,0 +1,85 @@
+[
+  {
+    "id": "factual_exit_load_mid_cap",
+    "kind": "factual",
+    "message": "What is the exit load for HDFC Mid Cap Fund?",
+    "scheme_id": "hdfc_mid_cap_direct_growth",
+    "expected_route": "factual",
+    "expected_citation_url": "https://groww.in/mutual-funds/hdfc-mid-cap-fund-direct-growth"
+  },
+  {
+    "id": "factual_expense_ratio_equity",
+    "kind": "factual",
+    "message": "Tell me the expense ratio for HDFC Equity Fund",
+    "scheme_id": "hdfc_equity_direct_growth",
+    "expected_route": "factual",
+    "expected_citation_url": "https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth"
+  },
+  {
+    "id": "factual_elss_lockin",
+    "kind": "factual",
+    "message": "What is the lock-in period for HDFC ELSS Tax Saver fund?",
+    "scheme_id": "hdfc_elss_tax_saver_direct_plan_growth",
+    "expected_route": "factual",
+    "expected_citation_url": "https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth"
+  },
+  {
+    "id": "factual_min_sip_large_cap",
+    "kind": "factual",
+    "message": "What is the minimum SIP amount in HDFC Large Cap Fund?",
+    "scheme_id": "hdfc_large_cap_direct_growth",
+    "expected_route": "factual",
+    "expected_citation_url": "https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth"
+  },
+  {
+    "id": "factual_benchmark_focused",
+    "kind": "factual",
+    "message": "What benchmark does HDFC Focused Fund track?",
+    "scheme_id": "hdfc_focused_direct_growth",
+    "expected_route": "factual",
+    "expected_citation_url": "https://groww.in/mutual-funds/hdfc-focused-fund-direct-growth"
+  },
+  {
+    "id": "negative_advisory_buy",
+    "kind": "negative",
+    "message": "Should I buy HDFC Mid Cap now?",
+    "expected_route": "advisory"
+  },
+  {
+    "id": "negative_best_fund",
+    "kind": "negative",
+    "message": "Which is the best HDFC mutual fund for me?",
+    "expected_route": "advisory"
+  },
+  {
+    "id": "negative_returns_compare",
+    "kind": "negative",
+    "message": "Compare returns of HDFC Equity and HDFC Focused fund",
+    "expected_route": "comparison"
+  },
+  {
+    "id": "negative_personal_data",
+    "kind": "negative",
+    "message": "My PAN is ABCDE1234F, can you help link my account?",
+    "expected_route": "ood"
+  },
+  {
+    "id": "edge_ambiguous_hdfc",
+    "kind": "edge",
+    "message": "What is the risk level of HDFC fund?",
+    "expected_route": "factual"
+  },
+  {
+    "id": "edge_mixed_language",
+    "kind": "edge",
+    "message": "HDFC ELSS fund ka lock in kitna hai?",
+    "expected_route": "factual",
+    "expected_citation_url": "https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth"
+  },
+  {
+    "id": "edge_non_corpus_request",
+    "kind": "edge",
+    "message": "Give me SBI fund details and suggestion",
+    "expected_route": "advisory"
+  }
+]

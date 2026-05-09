@@ -1,0 +1,6 @@
+{
+  "embedding_model": "all-MiniLM-L6-v2",
+  "index_build_id": "a49d0bb3-438a-48bd-8982-5edf296c39a4",
+  "corpus_manifest_hash": "69cc050ec5d40c08b4f2089df88532fa",
+  "document_count": 61
+}

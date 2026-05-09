@@ -1,0 +1,35 @@
+{
+  "schemes": {
+    "hdfc_elss_tax_saver_direct_plan_growth": {
+      "last_ok_batch_id": "136c203bb4024487a117ec0772b1bca4",
+      "last_ok_content_hash_sha256": "8a9c0f977ffe5b717f3b61dba2d51739a87a68f46e904d8ee86112580e9bd218",
+      "last_ok_fetched_at": "2026-05-08T19:30:17+00:00",
+      "last_ok_snapshot_dir": "data/ingestion/snapshots/136c203bb4024487a117ec0772b1bca4"
+    },
+    "hdfc_equity_direct_growth": {
+      "last_ok_batch_id": "136c203bb4024487a117ec0772b1bca4",
+      "last_ok_content_hash_sha256": "c74891717c24678521b81d45efe405736d45ea3a1f9e3ee9511ec320673ec6a1",
+      "last_ok_fetched_at": "2026-05-08T19:30:15+00:00",
+      "last_ok_snapshot_dir": "data/ingestion/snapshots/136c203bb4024487a117ec0772b1bca4"
+    },
+    "hdfc_focused_direct_growth": {
+      "last_ok_batch_id": "136c203bb4024487a117ec0772b1bca4",
+      "last_ok_content_hash_sha256": "3af4c59d25dc11367be537888283b487a9dd18d422b3f85eaf5a8c4e5f33c2ce",
+      "last_ok_fetched_at": "2026-05-08T19:30:16+00:00",
+      "last_ok_snapshot_dir": "data/ingestion/snapshots/136c203bb4024487a117ec0772b1bca4"
+    },
+    "hdfc_large_cap_direct_growth": {
+      "last_ok_batch_id": "136c203bb4024487a117ec0772b1bca4",
+      "last_ok_content_hash_sha256": "7e07502354bb63f1b5de80e90ede3236adfdcab44ed621b362bdb1c486d06d41",
+      "last_ok_fetched_at": "2026-05-08T19:30:19+00:00",
+      "last_ok_snapshot_dir": "data/ingestion/snapshots/136c203bb4024487a117ec0772b1bca4"
+    },
+    "hdfc_mid_cap_direct_growth": {
+      "last_ok_batch_id": "136c203bb4024487a117ec0772b1bca4",
+      "last_ok_content_hash_sha256": "f38afad9ee475b6507978edf6cd9a6d0af13dc4b58b95368cd4431455e2e4fe0",
+      "last_ok_fetched_at": "2026-05-08T19:30:13+00:00",
+      "last_ok_snapshot_dir": "data/ingestion/snapshots/136c203bb4024487a117ec0772b1bca4"
+    }
+  },
+  "version": 1
+}

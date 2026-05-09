@@ -1,0 +1,20 @@
+{
+  "batch_snapshot_id": "136c203bb4024487a117ec0772b1bca4",
+  "content_hash_sha256": "f38afad9ee475b6507978edf6cd9a6d0af13dc4b58b95368cd4431455e2e4fe0",
+  "content_type": "text/html; charset=utf-8",
+  "etag": null,
+  "fetch_attempts": 1,
+  "fetch_error": null,
+  "fetched_at": "2026-05-08T19:30:13+00:00",
+  "final_url": "https://groww.in/mutual-funds/hdfc-mid-cap-fund-direct-growth",
+  "http_status": 200,
+  "last_modified": null,
+  "parse_error": null,
+  "parse_ok": true,
+  "parsed_relpath": "parsed/hdfc_mid_cap_direct_growth.txt",
+  "parser_version": "html_stdlib_1_bs4",
+  "raw_relpath": "raw/hdfc_mid_cap_direct_growth.html",
+  "scheme_id": "hdfc_mid_cap_direct_growth",
+  "scheme_name": "HDFC Mid Cap Fund - Direct Growth",
+  "source_url": "https://groww.in/mutual-funds/hdfc-mid-cap-fund-direct-growth"
+}

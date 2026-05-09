@@ -1,0 +1,20 @@
+{
+  "batch_snapshot_id": "3b7491f465844459b577bd9d7f6bbb57",
+  "content_hash_sha256": "ac805df2a32cd73eba8119aebc2c261a31c31e0b8327fa5eb1ba8a4600f95b25",
+  "content_type": "text/html; charset=utf-8",
+  "etag": null,
+  "fetch_attempts": 1,
+  "fetch_error": null,
+  "fetched_at": "2026-05-04T18:13:14+00:00",
+  "final_url": "https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth",
+  "http_status": 200,
+  "last_modified": null,
+  "parse_error": null,
+  "parse_ok": true,
+  "parsed_relpath": "parsed/hdfc_equity_direct_growth.txt",
+  "parser_version": "html_stdlib_1",
+  "raw_relpath": "raw/hdfc_equity_direct_growth.html",
+  "scheme_id": "hdfc_equity_direct_growth",
+  "scheme_name": "HDFC Equity Fund - Direct Growth",
+  "source_url": "https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth"
+}

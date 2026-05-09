@@ -1,0 +1,20 @@
+{
+  "batch_snapshot_id": "136c203bb4024487a117ec0772b1bca4",
+  "content_hash_sha256": "3af4c59d25dc11367be537888283b487a9dd18d422b3f85eaf5a8c4e5f33c2ce",
+  "content_type": "text/html; charset=utf-8",
+  "etag": null,
+  "fetch_attempts": 1,
+  "fetch_error": null,
+  "fetched_at": "2026-05-08T19:30:16+00:00",
+  "final_url": "https://groww.in/mutual-funds/hdfc-focused-fund-direct-growth",
+  "http_status": 200,
+  "last_modified": null,
+  "parse_error": null,
+  "parse_ok": true,
+  "parsed_relpath": "parsed/hdfc_focused_direct_growth.txt",
+  "parser_version": "html_stdlib_1_bs4",
+  "raw_relpath": "raw/hdfc_focused_direct_growth.html",
+  "scheme_id": "hdfc_focused_direct_growth",
+  "scheme_name": "HDFC Focused Fund - Direct Growth",
+  "source_url": "https://groww.in/mutual-funds/hdfc-focused-fund-direct-growth"
+}

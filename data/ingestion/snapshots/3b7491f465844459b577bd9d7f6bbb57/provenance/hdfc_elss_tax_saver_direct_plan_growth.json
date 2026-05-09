@@ -1,0 +1,20 @@
+{
+  "batch_snapshot_id": "3b7491f465844459b577bd9d7f6bbb57",
+  "content_hash_sha256": "ce2c8397f45d61962a52b80c15a55f2daf0fe5afc7d623ae0a1e92f1c0dd214a",
+  "content_type": "text/html; charset=utf-8",
+  "etag": null,
+  "fetch_attempts": 1,
+  "fetch_error": null,
+  "fetched_at": "2026-05-04T18:13:17+00:00",
+  "final_url": "https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth",
+  "http_status": 200,
+  "last_modified": null,
+  "parse_error": null,
+  "parse_ok": true,
+  "parsed_relpath": "parsed/hdfc_elss_tax_saver_direct_plan_growth.txt",
+  "parser_version": "html_stdlib_1",
+  "raw_relpath": "raw/hdfc_elss_tax_saver_direct_plan_growth.html",
+  "scheme_id": "hdfc_elss_tax_saver_direct_plan_growth",
+  "scheme_name": "HDFC ELSS Tax Saver Fund - Direct Plan Growth",
+  "source_url": "https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth"
+}

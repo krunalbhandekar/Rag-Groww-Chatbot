@@ -1,0 +1,69 @@
+name: Refresh Corpus And Index
+
+on:
+  schedule:
+    # Daily at 02:00 UTC
+    - cron: "0 2 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Preserve previous ingestion state
+        run: |
+          mkdir -p data/evaluation/baselines
+          if [ -f data/ingestion/state.json ]; then
+            cp data/ingestion/state.json data/evaluation/baselines/state_before_refresh.json
+          fi
+
+      - name: Run ingestion
+        run: python scripts/phase1_ingest.py
+
+      - name: Run chunking
+        run: python scripts/phase2_chunk.py
+
+      - name: Run index build
+        run: python scripts/phase3_embed.py
+
+      - name: Generate corpus diff alert
+        run: |
+          python scripts/phase8_corpus_diff.py \
+            --before data/evaluation/baselines/state_before_refresh.json \
+            --after data/ingestion/state.json
+
+      - name: Run phase 8 evaluation gates
+        run: python scripts/phase8_evaluate.py --fail-on-threshold
+
+      - name: Commit refreshed artifacts
+        run: |
+          git add data/ingestion data/chunks data/index data/evaluation
+          if git diff --cached --quiet; then
+            echo "No data changes detected."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: refresh ingestion chunks and index"
+          git push
